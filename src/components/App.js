@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import RouterComponent from './Router';
 import { authService } from 'fbase';
 
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(!!authService.currentUser);
+  const [isLoggedIn] = useState(!!authService.currentUser);
   return (
     <>
       <RouterComponent isLoggedIn={isLoggedIn} />
